@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Modular Todos - Home</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="root"></div>
+
+
+<main class="container">
+<div class="card">
+<h1>Welcome to Modular Todos</h1>
+<p>This example demonstrates a modular JavaScript app with signup/login and a protected todos page that fetches todos from JSONPlaceholder.</p>
+<p>
+<a class="btn" href="/signup.html">Get Started (Signup)</a>
+<a class="btn" href="/login.html" style="margin-left:8px">Login</a>
+</p>
+</div>
+</main>
+
+
+<script type="module">
+import { createNavbar } from './components/navbar.js';
+import { createFooter } from './components/footer.js';
+const root = document.getElementById('root');
+root.prepend(createNavbar());
+root.appendChild(createFooter());
+</script>
+</body>
+</html>
